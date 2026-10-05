@@ -1,0 +1,49 @@
+{
+  "seed": 41,
+  "customers": 123000,
+  "srm_alarm_threshold": 0.0016666666666666668,
+  "conversion_guardrail": "No more than 10% relative conversion loss; chosen independently for illustration.",
+  "selection_rule": "Highest observed contribution among tested prices passing the simultaneous conversion noninferiority guardrail; control always eligible.",
+  "screening_ci": "Bonferroni 95% simultaneous across 12 comparisons per metric family",
+  "confirmation_ci": "Bonferroni 95% simultaneous across up to 6 corridor endpoints",
+  "elasticity_ci": "Pointwise 95% bootstrap, 500 draws; exploratory, not simultaneous",
+  "recommendations": [
+    {
+      "corridor": "Corridor-A",
+      "screening_selected_multiplier": 1.1,
+      "screening_srm_p_value": 0.6622658633121079,
+      "outcome": "Confirmed in synthetic follow-up",
+      "conversion_relative_change": -0.056926441233067115,
+      "conversion_ni_lower": 0.0072675899038092615,
+      "contribution_gain_usd": 0.16871631485214955,
+      "contribution_gain_lower": 0.09197477934230723,
+      "contribution_gain_upper": 0.24545785036199186,
+      "confirmation_srm_p_value": 0.47676672399858
+    },
+    {
+      "corridor": "Corridor-B",
+      "screening_selected_multiplier": 0.9,
+      "screening_srm_p_value": 0.11377282758520689,
+      "outcome": "Inconclusive: keep current pending further evidence",
+      "conversion_relative_change": 0.1469222753221897,
+      "conversion_ni_lower": 0.11851757036980583,
+      "contribution_gain_usd": -0.04630238998730274,
+      "contribution_gain_lower": -0.13940727712665624,
+      "contribution_gain_upper": 0.046802497152050745,
+      "confirmation_srm_p_value": 0.12510232555855905
+    },
+    {
+      "corridor": "Corridor-C",
+      "screening_selected_multiplier": 0.8,
+      "screening_srm_p_value": 0.009989160197065017,
+      "outcome": "Confirmed in synthetic follow-up",
+      "conversion_relative_change": 0.6242789987185182,
+      "conversion_ni_lower": 0.3363276140621706,
+      "contribution_gain_usd": 0.49350819537282264,
+      "contribution_gain_lower": 0.386482201833065,
+      "contribution_gain_upper": 0.6005341889125804,
+      "confirmation_srm_p_value": 0.21746822614353886
+    }
+  ],
+  "scope": "Entirely synthetic; no employer prices, policies, customers or results."
+}
