@@ -91,15 +91,6 @@ Randomization allocation is checked with a chi-square sample-ratio-mismatch test
 Confidence intervals use large-sample normal approximations for independent customer means. There are no repeated customer observations, small-count groups or cluster effects in this dataset. Do not generalize these intervals to repeated-session data without adjusting the design.
 
 No retention, repeat transaction value, complaints, competitive response, acquisition cost or customer lifetime value is modeled. The case shows immediate price response and business contribution only. Fixed send amount and costs are deliberate simplifications. Guardrails and success criteria should be fixed before observing real results; this case assumes adequate data volume rather than claiming a prospective power calculation.
-
-## Portfolio presentation
-
-“I independently built a synthetic corridor pricing experiment to measure response to price increases and decreases, estimate elasticity, and select a balanced tested price using contribution and conversion guardrails. I validated selected changes in an independent simulated follow-up.”
-
-Keep this separate from actual employer achievements. Add your own interpretation and defend the denominator, metric choice, guardrail and confirmation design before presenting it in an interview.
-
-## Questions to explain
-
 - Why measure both increases and decreases within each corridor?
 - Why use contribution per eligible customer rather than revenue per completed transfer?
 - Why can a discount increase conversion and still lose money?
