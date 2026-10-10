@@ -26,9 +26,10 @@ Prices are randomly assigned independently of propensity to convert. The respons
 
 ## What is measured
 
-- **Conversion:** converted customers / all eligible randomized customers.
-- **Revenue per eligible customer:** total price revenue / all eligible randomized customers.
-- **Contribution per eligible customer:** (price revenue − processing costs on completed transfers) / all eligible randomized customers.
+- **Conversion:** Primary metric: converted customers / all eligible randomized customers; 
+Secondary metrics: Transactions per customer (TPC), Send volume per customer (SPC)
+- **Revenue per eligible customer:** total price revenue / all eligible randomized customers (RPC)
+- **Contribution per eligible customer:** (price revenue − processing costs on completed transfers) / all eligible randomized customers (PPC)
 - **Price elasticity:** midpoint (arc) percentage change in conversion divided by midpoint percentage change in assigned price, separately for each treatment versus control.
 
 Arc elasticity uses `(conversion_treatment − conversion_control) / their average`, divided by `(price_treatment − price_control) / their average`. Negative values indicate that conversion moves opposite to price. It describes the finite price change tested, not one constant elasticity for all prices. The constant send amount makes price multipliers comparable within a corridor.
@@ -39,7 +40,7 @@ All randomized eligible customers remain in the denominator, including non-conve
 
 1. Estimate conversion, revenue and contribution in each randomized arm.
 2. Compare each increase and decrease with control; report uncertainty rather than just point estimates.
-3. Apply a conversion noninferiority guardrail: the candidate must be statistically consistent with **no more than a 10% relative loss in conversion**. This threshold is independently chosen for illustration, not an employer policy.
+3. Apply a conversion non inferiority guardrail: the candidate arm must be statistically consistent with **no more than a 10% relative loss in conversion**. This threshold is independently chosen for illustration, not an employer policy.
 4. Among the tested arms passing that guardrail, choose the highest observed contribution per eligible customer. Current price remains eligible as a fallback.
 5. Freeze the candidate and test it against current price in **a new, independent confirmatory experiment** (16,000 customers per corridor with a changed candidate).
 6. Require confirmation of both positive contribution gain and conversion noninferiority. Otherwise keep current price pending additional evidence.
